@@ -33,8 +33,10 @@ static const Rule rules[] = {
 	{ "TelegramDesktop",    NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "obs",                NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Lutris",             NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "firefox",   					NULL,     NULL,           1 << 1,    0,          0,          -1,        -1 },
-	{ "alacritty",          NULL,     NULL,           1 << 0,    0,          1,           0,        -1 },
+	{ "firefox",   					NULL,     NULL,           1 << 2,    0,          0,          -1,        -1 },
+	{ "Code",   						NULL,     NULL,           1 << 3,    0,          0,          -1,        -1 },
+	{ "Thunar",   					NULL,     NULL,           1 << 3,    0,          0,          -1,        -1 },
+	{ "st",          				NULL,     NULL,           0,    0,          1,           0,        -1 },
 	{ NULL,                 NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
@@ -77,7 +79,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_s,      incnmaster,     {.i = +1 } },
 	{ MODKEY,		        						XK_c,      killclient,     {0} },
-	{ MODKEY,                       XK_w,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_a,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_e,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY|ShiftMask,             XK_r,  	   togglefloating, {0} },
